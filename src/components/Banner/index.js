@@ -15,7 +15,7 @@ export function Banner() {
             <PagerView initialPage={0} style={styles.content} onPageSelected={onPageSelected}>
                 <View key="1" style={styles.page}>
                     <Image
-                        source={{ uri: '' }}
+                        source={{ uri: 'https://www.radiocacula.com.br/wp-content/uploads/2023/12/870886.jpg' }}
                         style={styles.bannerImage}
                         resizeMode="cover"
                     />
@@ -23,7 +23,7 @@ export function Banner() {
                 </View>
                 <View key="2" style={styles.page}>
                     <Image
-                        source={{ uri: '' }}
+                        source={{ uri: 'https://media.gazetadopovo.com.br/2015/09/2b33b116ba95cf5827dce2f2dafd3e18-gpLarge.jpg' }}
                         style={styles.bannerImage}
                         resizeMode="cover"
                     />
@@ -31,7 +31,7 @@ export function Banner() {
                 </View>
                 <View key="3" style={styles.page}>
                     <Image
-                        source={{ uri: '' }}
+                        source={{ uri: 'https://assets.mubicdn.net/images/film/22845/image-w1280.jpg?1543863611' }}
                         style={styles.bannerImage}
                         resizeMode="cover"
                     />
@@ -49,7 +49,7 @@ export function Banner() {
                     fontFamily: 'bold',
                     marginTop: 20,
                     textAlign: 'center',
-                }}>Páginal principal, com banners</Text>
+                }}>Mês do Sci-fi</Text>
             </View>
         </View>
     );

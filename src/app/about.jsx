@@ -22,19 +22,19 @@ export default function About() {
                 }} 
             />
         <Text style={{ 
-            fontSize: 18, 
+            fontSize: 20, 
             fontWeight: '500', 
             color: '#333', 
             textAlign: 'center', 
             lineHeight: 26, 
             paddingHorizontal: 20, 
             fontFamily: 'sans-serif',
-            marginBottom: 20,
-            borderWidth: 2,
+            marginBottom: 10,
+            borderWidth: 5,
             borderColor: '#fac055',
             borderRadius: 10,
             paddingVertical: 5,
-            margin: 10,
+            margin: 80,
         }}>
            Gustavo Santos Gomes, tenho 17 anos, sou aluno da ETEC de Presidente Venceslau, curso o 2º ano do ensino médio integrado ao técnico em informática.
         </Text>
