@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "react-native---graziani-app",
-    "slug": "react-native---graziani-app",
-    "scheme": "react-native---graziani-app",
+    "name": "react-native-2024",
+    "slug": "react-native-2024",
+    "scheme": "react-native-2024",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./src/assets/icon.png",
