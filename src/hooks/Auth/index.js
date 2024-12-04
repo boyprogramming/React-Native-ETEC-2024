@@ -64,12 +64,23 @@ export function AuthProvider({ children }) {
 
   const signOut = async () => {
     await AsyncStorage.removeItem("@payment:user");
-    setUser({
-      authenticated: false,
-      user: null,
-      role: null,
-    });
+      setUser({
+        authenticated: false,
+        user: null,
+        role: null,
+      });
   };
+
+  if (user?.authenticated === null) {
+    return (
+      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+        <Text style={{ fontSize: 28, marginTop: 15 }}>
+          Carregando dados do usuário
+        </Text>
+        <ActivityIndicator size="large" color="#0000ff" />
+      </View>
+    );
+  }
 
   return (
     <AuthContext.Provider value={{ user, signIn, signOut }}>

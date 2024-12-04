@@ -40,6 +40,7 @@ export default function App() {
       <Button title="Entrar" onPress={handleEntrarSuper} color="#9cd6c8" />
       <Button title="Sobre" onPress={() => router.push("about")} color="#fac055" />
       <Button title="Sair do aplicativo" onPress={() => BackHandler.exitApp()} color="#e57c3a" />
+      <Button title="Banco de dados" onPress={() => router.push("/maintenance")} />
       <StatusBar style="auto" />
     </View>
   );
@@ -48,17 +49,17 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f9f9f9', 
+    backgroundColor: '#f9f9f9', // Cor de fundo suave
     alignItems: 'center',
     justifyContent: 'center',
     gap: 15,
-    padding: 20, 
+    padding: 20, // Adiciona espaçamento nas laterais
   },
   title: {
     fontFamily: "regular",
-    fontSize: 24, 
-    fontWeight: 'bold', 
-    color: '#333', 
+    fontSize: 24, // Aumenta o tamanho da fonte
+    fontWeight: 'bold', // Deixa o título em negrito
+    color: '#333', // Cor do texto
   },
   inputbox: {
     flexDirection: "row",
@@ -68,14 +69,14 @@ const styles = StyleSheet.create({
     borderWidth: 1,        
     borderColor: '#ccc',  
     borderRadius: 8,      
-    paddingHorizontal: 10, 
+    paddingHorizontal: 10,
     paddingVertical: 5,    
   },
   emailinput: {
     flex: 1,
     fontFamily: "regular",
     fontSize: 20,
-    paddingVertical: 10, 
+    paddingVertical: 10, // Adiciona espaçamento vertical
   },
   button: {
     width: "100%",

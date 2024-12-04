@@ -10,7 +10,7 @@ function CustomDrawerContent(props) {
 
   return (
     <View style={{ flex: 1 }}>
-      <View style={{ marginTop: 20, justifyContent: "center", alignItems: "center", backgroundColor: "#f0f1f9", paddingVertical: 10 }}>
+      <View style={{ marginTop: 20, justifyContent: "center", alignItems: "center", backgroundColor: "#f0f0f0", paddingVertical: 10 }}>
         <Image
           source={{
             uri: 'https://avatars.githubusercontent.com/u/155779046?v=4',
@@ -22,9 +22,9 @@ function CustomDrawerContent(props) {
       <DrawerContentScrollView {...props}>
         <DrawerItemList {...props} />
       </DrawerContentScrollView>
-      <TouchableOpacity onPress={() => signOut()} style={{ justifyContent: "center", alignItems: "center", height: 50, margin: 10, backgroundColor: "#e57c3a", borderRadius: 5, }}>
+      <TouchableOpacity onPress={() => signOut()} style={{ justifyContent: "center", alignItems: "center", height: 50, margin: 10, backgroundColor: "orange", borderRadius: 5, }}>
 
-        <Text style={{ color: "white", fontFamily: "bold" }} >Sair da Conta</Text>
+        <Text style={{ color: "white", fontFamily: "bold" }} >Deslogar</Text>
       </TouchableOpacity>
     </View>
   );
@@ -45,6 +45,10 @@ const DrawerLayout = () => {
         <Drawer.Screen
           name="payment"
           options={{ drawerLabel: "Pagamentos", headerTitle: "Pagamentos", drawerIcon: () => (<Ionicons name="diamond-outline" size={20} color="black" />), }}
+        />
+        <Drawer.Screen
+          name="details"
+          options={{ unmountOnBlur: true, headerTitle: "Detalhes", drawerItemStyle: { display: "none" } }}
         />
       </Drawer>
     </GestureHandlerRootView>

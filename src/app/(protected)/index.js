@@ -11,6 +11,7 @@ import {
 } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 
+
 const movieData = {
   sciFi: [
     { id: "1", title: "Interstellar", cover: "https://cdn-images.dzcdn.net/images/cover/5a02690056ec7f97030788109498ac5a/0x1900-000000-80-0-0.jpg", synopsis: "Uma equipe de exploradores viaja através de um buraco de minhoca no espaço em uma tentativa de salvar a humanidade." },
@@ -29,16 +30,19 @@ const movieData = {
   ],
 };
 
+
 export default function Home() {
   const [activeTab, setActiveTab] = useState("sciFi");
   const [selectedMovie, setSelectedMovie] = useState(null);
   const [modalVisible, setModalVisible] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
 
+
   const handleMoviePress = (movie) => {
     setSelectedMovie(movie);
     setModalVisible(true);
   };
+
 
   const renderMovieCard = ({ item, index }) => {
     const isThirdCard = index === 2;
@@ -54,9 +58,11 @@ export default function Home() {
     );
   };
 
+
   const filteredMovies = movieData[activeTab].filter((movie) =>
     movie.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
+
 
   return (
     <View style={styles.container}>
@@ -71,6 +77,7 @@ export default function Home() {
         />
         <MaterialIcons name="search" size={24} color="#aaa" />
       </View>
+
 
       {/* Abas */}
       <View style={styles.tabContainer}>
@@ -98,6 +105,7 @@ export default function Home() {
         ))}
       </View>
 
+
       {/* Cards */}
       <FlatList
         data={filteredMovies}
@@ -107,6 +115,7 @@ export default function Home() {
         numColumns={2}
         showsVerticalScrollIndicator={false}
       />
+
 
       {/* Modal de Sinopse */}
       {selectedMovie && (
@@ -134,6 +143,7 @@ export default function Home() {
     </View>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {
@@ -255,4 +265,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
 });
+
+
+
 

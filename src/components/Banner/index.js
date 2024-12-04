@@ -3,12 +3,16 @@ import { Image, StyleSheet, Text, View } from "react-native";
 import PagerView from "react-native-pager-view";
 
 
+
+
 export function Banner() {
     const [page, setPage] = useState(0);
+
 
     const onPageSelected = (e) => {
         setPage(e.nativeEvent.position);
     };
+
 
     return (
         <View style={styles.container}>
@@ -55,10 +59,12 @@ export function Banner() {
     );
 }
 
+
 const styles = StyleSheet.create({
     container: {
         flex: 1
     },
+
 
     content: {
         marginTop: 10,
@@ -68,6 +74,7 @@ const styles = StyleSheet.create({
         width: '100%',
     },
 
+
     page: {
         justifyContent: 'center',
         alignItems: 'center',
@@ -75,11 +82,13 @@ const styles = StyleSheet.create({
         padding: 10,
     },
 
+
     bulletContent: {
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
     },
+
 
     bullet: {
         width: 10,
@@ -89,9 +98,11 @@ const styles = StyleSheet.create({
         backgroundColor: '#999'
     },
 
+
     activeBullet: {
         backgroundColor: '#000',
     },
+
 
     text: {
         fontSize: 20,
